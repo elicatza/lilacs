@@ -1,0 +1,73 @@
+.Dd April 14, 2022
+.Dt LILACS 1
+.Os
+
+.Sh NAME
+.Nm lilacs
+.Nd personal diary manager
+
+.Sh SYNOPSIS
+.Nm
+.Fl Em operation
+.Op Fl Ar options
+.Op Ar dates ...
+
+.Sh DESCRIPTION
+The
+.Nm
+utility manages diary entries based on dates.
+It can add new entries and edit old ones
+
+.Sh OPERATIONS
+.Bl -tag -width Fl
+.It Fl N -new
+Creates a new entry for current date. If that entry already exists, it will use the append option.
+.It Fl Q -query
+Query entries. Default behaviour is to list all entries, but can be modified with flags.
+.It Fl T -templates
+Lists all templates.
+.It Fl h -help
+Prints help menu and exits.
+.It Fl V -version
+Prints 
+.Nm
+version and exits.
+
+.Sh OPTIONS
+.Bl -tag -width Fl
+.It Fl h -help
+Prints help menu for the selected operation and exits.
+
+.Sh NEW OPTIONS (APPLY TO -N)
+.Bl -tag -width Fl
+.It Fl a -append
+Append the append template to specified date entry.
+
+.Sh QUERY OPTIONS (APPLY TO -Q)
+.Bl -tag -width Fl
+
+.Sh TEMPLATES OPTIONS (APPLY TO -T)
+These are global options that can be applied to all
+.Em OPERATIONS
+\.
+
+.Bl -tag -width Fl
+.It Fl o -output
+Prints the template with values inserted into variable placeholders.
+.It Fl r -raw-output
+Prints the template without values inserted into variable placeholders.
+Will function the same way plain
+.Sy cat
+(1) does.
+
+.Sh FILES
+
+.Sh EXAMPLES
+
+.Sh SEE ALSO
+.Sy pacman
+(1)
+
+.Sh AUTHORS
+Originally written by elicatza.
+.Aq https://github.com/elicatza
