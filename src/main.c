@@ -7,8 +7,9 @@
 
 
 int main(int argc, char *argv[]) {
-    // Parse flags
-    // Parse config
+    struct flg_flags flags = parse_args(argc, argv);
+    if (flags->op == HELP) {
+    }
     printf("Hello world!\n");
 
     return EXIT_SUCCESS;

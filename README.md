@@ -2,16 +2,18 @@
 My personal diary manager.
 
 ## Dependencies
-- Neovim
-- Gramma
+- Cmake
+- Make
+- Ninja
 
 ## Features
-- New entries
-- Append entry
+- Config file
+- Templates
 - Man page
-- Take date as parameter
 
 ### Templates
+templates are stored in plain text files. Within the files you use placeholders with the format {pattern}.
+Where pattern is a script you want get the replacement for.
 - Date -> {date} -> YYYY-MM-DD
 - Time -> {time} -> HH:MM
 - Other?
@@ -19,3 +21,8 @@ My personal diary manager.
 ### Config
 rootdir = project directory
 path_name_convention = yyyy/mm/dd
+
+### Files
+- $HOME/.config/lilacs/lilacs.toml?
+- $HOME/.config/lilacs/scripts/* -> $HOME/.local/share/lilacs/bin
+- $HOME/.config/lilacs/templates/* -> $HOME/.local/share/lilacs/templates

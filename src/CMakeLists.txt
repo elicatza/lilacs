@@ -8,5 +8,5 @@ project(${PROGRAMNAME})
 # add the executable
 add_executable(${PROGRAMNAME} main.c)
 add_library(flags flags.c)
-target_link_libraries(${PROGRAMNAME} hello)
+target_link_libraries(${PROGRAMNAME} flags)
 
